@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class CouchbaseCapellaCRUD {
 
-    private static final String CONNECTION_STRING = "couchbases://cb.r8gvciwkzk6mlbml.cloud.couchbase.com";
+    private static final String CONNECTION_STRING = "couchbases://cb.xivyho4vzbz9nlfx.cloud.couchbase.com";
     private static final String USERNAME = "abhijeet@example.com";
     private static final String PASSWORD = "Password@P1";
     private static final String BUCKET_NAME = "person";
@@ -57,6 +57,7 @@ public class CouchbaseCapellaCRUD {
 
     public static void main(String[] args) {
         CouchbaseCapellaCRUD crud = new CouchbaseCapellaCRUD();
+        System.out.println("********************* CRUD operations STARTED *****************: ");
 
         // Create a new JsonObject
         JsonObject jsonObject = JsonObject.create()
@@ -68,9 +69,9 @@ public class CouchbaseCapellaCRUD {
         String id = created.getString("id");
         System.out.println("Created: " + created);
 
-        // Read
-        JsonObject read = crud.read(id);
-        System.out.println("Read: " + read);
+        // Read by key
+        JsonObject docValue = crud.read(id);
+        System.out.println("Read: " + docValue);
 
         // TODO: CREATE PRIMARY INDEX ON `default`:`person`
         // Create a N1QL query to get all the beer documents
@@ -83,17 +84,23 @@ public class CouchbaseCapellaCRUD {
         }
 
         // Update
-        JsonObject updatedContent = read.put("name", "James Doe");
+
+        JsonObject updatedContent = docValue.put("name", "James Smith");
+//        String newId="user::abc@gmail.com";
         JsonObject updated = crud.update(id, updatedContent);
         System.out.println("Updated: " + updated);
 
         // Delete
-//        crud.delete(id);
+/*
+        crud.delete(id);
         try {
             JsonObject deleted = crud.read(id);
             System.out.println("Deleted: " + deleted);
         } catch (DocumentNotFoundException e) {
             System.out.println("Document not found (expected after deletion)");
         }
+*/
+
+        System.out.println("********************* CRUD operations DELETED *****************: ");
     }
 }
