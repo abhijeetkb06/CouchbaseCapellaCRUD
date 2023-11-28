@@ -12,6 +12,8 @@ import java.time.Duration;
 
 public class CouchbaseCapellaCRUD {
 
+//    private static final String CONNECTION_STRING = "couchbases://cb.xivyho4vzbz9nlfx.cloud.couchbase.com";
+
     private static final String CONNECTION_STRING = "couchbases://cb.xivyho4vzbz9nlfx.cloud.couchbase.com";
     private static final String USERNAME = "abhijeet@example.com";
     private static final String PASSWORD = "Password@P1";
@@ -101,6 +103,6 @@ public class CouchbaseCapellaCRUD {
         }
 */
 
-        System.out.println("********************* CRUD operations DELETED *****************: ");
+        System.out.println("********************* CRUD operations COMPLETED *****************: ");
     }
 }

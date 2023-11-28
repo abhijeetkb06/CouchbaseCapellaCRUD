@@ -74,6 +74,10 @@
       <workItem from="1680807408067" duration="1166000" />
       <workItem from="1681664132419" duration="836000" />
       <workItem from="1681682107848" duration="3597000" />
+      <workItem from="1681783801514" duration="1310000" />
+      <workItem from="1681836637077" duration="1863000" />
+      <workItem from="1692073968826" duration="986000" />
+      <workItem from="1692243660417" duration="18000" />
     </task>
     <servers />
   </component>
@@ -96,7 +100,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/CouchbaseCapellaCRUD.java</url>
-          <line>34</line>
+          <line>36</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
